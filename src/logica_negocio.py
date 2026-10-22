@@ -45,4 +45,3 @@ def validar_numero_positivo(entrada_texto: str) -> bool:
         return numero > 0
     except ValueError:
         return False
-    
