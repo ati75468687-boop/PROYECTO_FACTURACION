@@ -59,21 +59,9 @@ jobs:
           python scripts/mantenimiento_sistema.py
 
       - name: 10. Publicar artefacto de mantenimiento
-        uses: actions/upload-artifact@v4
-        with:
+          - name: 10. Publicar artefacto de mantenimiento
+           uses: actions/upload-artifact@v4
+          with:
           name: reporte-mantenimiento-sistema
           path: reporte_mantenimiento.txt
-  
-  - name: 9. Ejecutar script de mantenimiento
-        env: 
-
-PYTHONPATH: .
-
-run: |
-          python scripts/mantenimiento_sistema.py
-
- - name: 10. Publicar artefacto de mantenimiento
-   uses: actions/upload-artifact@v4
-   with:
-     name: reporte-mantenimiento-sistema
-     path: reporte_mantenimiento.txt
+          
